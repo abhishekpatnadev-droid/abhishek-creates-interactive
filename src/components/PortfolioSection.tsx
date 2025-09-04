@@ -148,7 +148,7 @@ const PortfolioSection = () => {
                   className="glass-button w-full"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <Mail className="h-4 w-4 mr-2" />
+                  <Smartphone className="h-4 w-4 mr-2" />
                   Interested? Let's Talk
                 </Button>
               </div>
