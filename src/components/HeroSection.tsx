@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Phone, ArrowDown } from "lucide-react";
+import { Github, Mail, Phone, ArrowDown, MessageSquare } from "lucide-react";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,14 +21,22 @@ const HeroSection = () => {
       
       <div className={`container mx-auto px-6 text-center z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-4xl mx-auto space-y-8">
+          {/* Spline Greeting Robot */}
+          <div className="w-32 h-32 md:w-48 md:h-48 mx-auto mb-8">
+            <spline-viewer 
+              url="https://prod.spline.design/KTbkVlATMBYKF07Q/scene.splinecode"
+              style={{width: '100%', height: '100%', borderRadius: '50%'}}
+            ></spline-viewer>
+          </div>
+          
           {/* Main heading */}
-          <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-              <span className="hero-text glow-pulse">Abhishek</span>
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight perspective-1000">
+              <span className="hero-text-3d glow-pulse transform-3d">Abhishek</span>
               <br />
-              <span className="hero-text">Kumar</span>
+              <span className="hero-text-3d transform-3d">Kumar</span>
             </h1>
-            <div className="h-1 w-32 mx-auto hero-gradient rounded-full" />
+            <div className="h-1 w-32 mx-auto hero-gradient rounded-full shadow-glow" />
           </div>
 
           {/* Subtitle */}
@@ -85,6 +93,14 @@ const HeroSection = () => {
                 onClick={() => window.open('tel:7979708232')}
               >
                 <Phone className="h-5 w-5" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="glass-button p-3"
+                onClick={() => window.open('https://wa.me/917979708232?text=Hi%20Abhishek,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.')}
+              >
+                <MessageSquare className="h-5 w-5" />
               </Button>
               <Button 
                 variant="outline" 

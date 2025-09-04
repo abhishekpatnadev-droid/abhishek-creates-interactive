@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Smartphone, Monitor } from "lucide-react";
+import { ExternalLink, Github, Smartphone, Monitor, Mail } from "lucide-react";
 
 const PortfolioSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,12 +27,12 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title: "SchoolSync Mobile App",
-      description: "A comprehensive school management mobile application that streamlines communication between teachers, students, and parents. Features include attendance tracking, grade management, and real-time notifications.",
-      type: "mobile",
+      title: "Limra Convent School App",
+      description: "Complete school management mobile application for Limra Convent featuring student test results, notices, upcoming tests, recent results, and school activities. Streamlines communication between teachers, students, and parents.",
+      type: "mobile", 
       tech: ["React Native", "Firebase", "Node.js", "MongoDB"],
-      image: "🏫",
-      highlights: ["500+ Active Users", "5 Schools Deployed", "98% Uptime"]
+      image: "🏛️",
+      highlights: ["Live in Production", "500+ Students", "Real-time Updates"]
     },
     {
       title: "EduPortal Web Platform",
@@ -140,23 +140,16 @@ const PortfolioSection = () => {
                 </div>
               </div>
 
-              {/* Action buttons */}
-              <div className="flex gap-3 pt-4 border-t border-glass-border">
+              {/* Contact CTA */}
+              <div className="pt-4 border-t border-glass-border">
                 <Button 
                   variant="outline" 
                   size="sm"
-                  className="glass-button flex-1"
+                  className="glass-button w-full"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Live Demo
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="glass-button flex-1"
-                >
-                  <Github className="h-4 w-4 mr-2" />
-                  Source Code
+                  <Mail className="h-4 w-4 mr-2" />
+                  Interested? Let's Talk
                 </Button>
               </div>
             </Card>

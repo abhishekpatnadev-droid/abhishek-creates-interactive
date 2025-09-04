@@ -154,6 +154,33 @@
     @apply bg-gradient-to-r from-primary-glow via-accent to-primary bg-clip-text text-transparent;
   }
 
+  /* 3D Hero text */
+  .hero-text-3d {
+    @apply bg-gradient-to-r from-primary-glow via-accent to-primary bg-clip-text text-transparent;
+    text-shadow: 
+      2px 2px 4px hsl(var(--primary) / 0.3),
+      4px 4px 8px hsl(var(--primary) / 0.2),
+      6px 6px 12px hsl(var(--primary) / 0.1);
+    transform-style: preserve-3d;
+  }
+
+  .transform-3d {
+    transform: rotateX(15deg) rotateY(-5deg);
+    transition: var(--transition-smooth);
+  }
+
+  .transform-3d:hover {
+    transform: rotateX(10deg) rotateY(5deg) scale(1.02);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
   /* Floating animations */
   .float-animation {
     animation: float 6s ease-in-out infinite;

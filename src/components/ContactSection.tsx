@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Calendar, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -223,25 +223,35 @@ const ContactSection = () => {
             </Card>
 
             {/* Quick contact actions */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-3">
               <Button 
                 variant="outline" 
                 size="lg"
-                className="glass-button p-6 h-auto flex-col gap-2"
+                className="glass-button p-4 h-auto flex-col gap-2"
                 onClick={() => window.open('tel:7979708232')}
               >
-                <Phone className="h-6 w-6 text-accent" />
-                <span className="text-sm">Call Now</span>
+                <Phone className="h-5 w-5 text-accent" />
+                <span className="text-xs">Call</span>
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
-                className="glass-button p-6 h-auto flex-col gap-2"
+                className="glass-button p-4 h-auto flex-col gap-2"
                 onClick={() => window.open('mailto:abhishek.patna.dev@gmail.com')}
               >
-                <Mail className="h-6 w-6 text-primary" />
-                <span className="text-sm">Email Direct</span>
+                <Mail className="h-5 w-5 text-primary" />
+                <span className="text-xs">Email</span>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="glass-button p-4 h-auto flex-col gap-2"
+                onClick={() => window.open('https://wa.me/917979708232?text=Hi%20Abhishek,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.')}
+              >
+                <MessageSquare className="h-5 w-5 text-secondary" />
+                <span className="text-xs">WhatsApp</span>
               </Button>
             </div>
           </div>
