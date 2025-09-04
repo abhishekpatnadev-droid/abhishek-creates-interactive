@@ -14,20 +14,27 @@ const HeroSection = () => {
       {/* Animated background */}
       <div className="absolute inset-0 hero-gradient animate-gradient opacity-20" />
       
+      {/* Spline Greeting Robot Background */}
+      <div className="absolute inset-0 flex items-center justify-center z-0">
+        <div className="w-[120%] h-[120%] opacity-40">
+          <spline-viewer 
+            url="https://prod.spline.design/KTbkVlATMBYKF07Q/scene.splinecode"
+            style={{
+              width: '100%', 
+              height: '100%',
+              pointerEvents: 'none'
+            }}
+          ></spline-viewer>
+        </div>
+      </div>
+      
       {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-20 w-32 h-32 glass-card rounded-full float-animation opacity-30" />
-      <div className="absolute bottom-32 right-20 w-24 h-24 glass-card rounded-lg float-animation opacity-40" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-10 w-16 h-16 glass-card rounded-full float-animation opacity-25" style={{ animationDelay: '4s' }} />
+      <div className="absolute top-20 left-20 w-32 h-32 glass-card rounded-full float-animation opacity-30 z-5" />
+      <div className="absolute bottom-32 right-20 w-24 h-24 glass-card rounded-lg float-animation opacity-40 z-5" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-10 w-16 h-16 glass-card rounded-full float-animation opacity-25 z-5" style={{ animationDelay: '4s' }} />
       
       <div className={`container mx-auto px-6 text-center z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Spline Greeting Robot */}
-          <div className="w-32 h-32 md:w-48 md:h-48 mx-auto mb-8">
-            <spline-viewer 
-              url="https://prod.spline.design/KTbkVlATMBYKF07Q/scene.splinecode"
-              style={{width: '100%', height: '100%', borderRadius: '50%'}}
-            ></spline-viewer>
-          </div>
           
           {/* Main heading */}
           <div className="space-y-6">
